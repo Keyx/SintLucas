@@ -1,0 +1,103 @@
+<html>
+<head>
+<script type="text/javascript">
+function goBack()
+  {
+  document.write("Total Width: " + screen.width);
+  }
+
+function titel(){
+	document.write(document.title);
+}
+
+function bg(){
+	document.body.style.background = "red";
+}
+
+function numb(){
+	document.write(document.getElementById("form").length);
+}
+
+function displayResult()
+{
+document.getElementById("myTable").deleteRow(0);
+}
+
+function displayResults()
+{
+var table=document.getElementById("myTable");
+var row=table.insertRow(0);
+var cell1=row.insertCell(0);
+var cell2=row.insertCell(1);
+cell1.innerHTML="New";
+cell2.innerHTML="New";
+}
+
+
+function button(een){
+	
+
+   var x = document.getElementById('verander').innerHTML;
+	if(een){
+		document.write(x.toLowerCase());
+} else{
+		document.write(x.toUpperCase());
+	}
+}
+
+//Dit is een aanpassing
+</script>
+<title>Homepagina</title>
+</head>
+<body id="test">
+	
+
+<h2>Opdracht 1:</h2>
+<input type="button" value="Klik" onclick="goBack()">
+
+<h2>Opdracht 2:</h2>
+<input type="button" value="Klik" ondblclick="titel()">
+
+<h2>Opdracht 3:</h2>
+<input type="button" value="Klik" onmousedown="bg()">
+
+<h2>Opdracht 4:</h2>
+<form id="form">
+	<input value="type"type="textbox">
+	<input type="textbox">
+	<input type="textbox">
+	<input type="textbox">
+	<input type="submit" onmousemove="numb()">
+</form>
+
+<h2>Opdracht 5:</h2>
+<table id="myTable" border="1">
+  <tr>
+    <td>cell 1</td>
+    <td>cell 2</td>
+  </tr>
+  <tr>
+    <td>cell 3</td>
+    <td>cell 4</td>
+  </tr>
+</table>
+<button type="button" onclick="displayResults()">Insert new row</button>
+<button type="button" onclick="displayResult()">Delete first row</button>
+
+<h2>Opdracht 6:</h2>
+<p id="verander">Keyx van Lierop</p>
+<button type="button" onclick="button(false)">Hoofdletters</button>
+<button type="button" onclick="button(true)">Kleine letters</button>
+<h2>Opdracht 7:</h2>
+<p></p>
+
+<h2>Opdracht 8:</h2>
+<p></p>
+
+<h2>Opdracht 9:</h2>
+<p></p>
+
+<h2>Opdracht 10:</h2>
+<p></p>
+</body>
+</html>
